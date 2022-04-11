@@ -16,7 +16,12 @@ export const Board = () => {
         <>
             {
                 boardState.map((item) => (
-                    <mesh key={item.id} position={new Vector3(...item.pos)} scale={[1, 1, 0.5]} rotation={[Math.PI / -2, 0, 0]}>
+                    <mesh
+                        onClick={() => {}}
+                        key={item.id}
+                        position={new Vector3(...item.pos)}
+                        scale={[1, 1, 0.5]}
+                        rotation={[Math.PI / -2, 0, 0]}>
                         <meshStandardMaterial color={item.color}/>
                         <boxGeometry />
                     </mesh>

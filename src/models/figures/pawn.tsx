@@ -6,7 +6,7 @@ export function Pawn(props: any) {
 
     const group = useRef<THREE.Group>();
 
-    const {nodes, materials} = useGLTF("/figures/pawn.gltf") as any;
+    const {nodes, materials} = useGLTF("/3d-chess-ts/figures/pawn.gltf") as any;
 
     const [hover, setHover] = useState(false)
 
@@ -44,12 +44,12 @@ export function Pawn(props: any) {
                     onPointerOut={onPointerOut}
                     onClick={onSelect}
                 >
-                    <meshStandardMaterial color={!hover ? props.color : 'orange'}/>
+                    <meshStandardMaterial color={!hover ? props.color : 'blue'}/>
                 </mesh>
 
             </group>
             {
-                !selected
+                !hover
                     ?
                     null
                     :
